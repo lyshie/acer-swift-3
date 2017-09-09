@@ -11,4 +11,4 @@ if [[ $BRIGHT =~ ^dec|down$ ]]; then
 fi
 
 CURRENT=$(printf "%.0f" $(xbacklight -get))
-notify-send -t 10 -u low -h "int:value:${CURRENT}" -i video-display "背光亮度 ${CURRENT}%"
+timeout 1 notify-send -t 10 -u low -h "int:value:${CURRENT}" -i video-display "背光亮度 ${CURRENT}%"
